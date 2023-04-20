@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsiga Protheus</Author>
+  <LastAuthor>Framework Time</LastAuthor>
+  <Created>2011-11-11T00:00:00Z</Created>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11820</WindowHeight>
+  <WindowWidth>18195</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>75</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="TITLE">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#1F497D"  ss:Bold='1'  />
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="3" ss:Color="#FFFFFF"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="HEADER">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#FFFFFF"  ss:Bold='1'  />
+   <Interior ss:Color="#4F81BD" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEA">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#000000" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEB">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#000000" />
+   <Interior ss:Color="#DCE6F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEALeftGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEALeftNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEACenterNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEARightNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBLeftNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBCenterNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBRightNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="SC023140" ss:Parent="LINEBLeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023150" ss:Parent="LINEBLeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023160" ss:Parent="LINEBLeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023170" ss:Parent="LINEBLeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023180" ss:Parent="LINEBRightMonetario" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023190" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023200" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023210" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023220" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023230" ss:Parent="LINEARightMonetario" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023240" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023250" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023260" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023270" ss:Parent="LINEALeftGeneral" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="SC023280" ss:Parent="LINEARightMonetario" >
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10" ss:Color="#DC143C" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Produtos">
+  <Table ss:ExpandedColumnCount="5" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="36"/>
+   <Column ss:Width="84"/>
+   <Column ss:Width="24"/>
+   <Column ss:Width="24"/>
+   <Column ss:Width="102"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="4"><Data ss:Type="String">Informações</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">Código</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">Descrição</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">Tipo</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">U.M.</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">Preço</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00001</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CAPA IPHONE 14</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">99.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00002</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CAPA IPHONE 13</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">69.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00003</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CAPA IPHONE 12</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">49.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CAPA GALAXY S22</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">49.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CAPA XIAOMI MI 12S ULTRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">49.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00006</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PELICULA IPHONE 14</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">59.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00007</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PELICULA IPHONE 13</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">39.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00008</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PELICULA IPHONE 12</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">29.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00009</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PELICULA GALAXY S22</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">29.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00010</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PELICULA XIAOMI MI 12S ULTRA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">29.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00011</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CABO USB X TYPE C</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">29.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00012</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CABO USB X LIGHTNING</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">49.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00013</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CARREGADOR 10W</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">24.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00014</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CARREGADOR 20W</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">54.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00015</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">FONE DE OUVIDO BLUETOOTH</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">149.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">000000000000001</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">GUERRA DO VELHO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00016</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">SUPORTE DE MESA PARA CELULAR</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">14.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00017</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">SUPORTE VEICULAR PARA CELULAR</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">19.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00018</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">SUPORTE ANEL PARA CELULAR</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">9.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">000000000000002</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">BRIGADAS FANTASMA ,AS</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">49.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00019</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">POPSOCKET PERSONALIZADO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">24.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00020</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LIMPA TELA MAGICO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">39.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00021</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">RINGLIGHT MESA 10CM C SUPORTE</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">49.99</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="SC023140"><Data ss:Type="String">C00022</Data></Cell>
+    <Cell ss:StyleID="SC023150"><Data ss:Type="String">Cad. Manual - Cad. Manual - PA</Data></Cell>
+    <Cell ss:StyleID="SC023160"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="SC023170"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="SC023180"><Data ss:Type="Number">229.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="SC023190"><Data ss:Type="String">C00023</Data></Cell>
+    <Cell ss:StyleID="SC023200"><Data ss:Type="String">Cad. Manual - SOCORRO</Data></Cell>
+    <Cell ss:StyleID="SC023210"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="SC023220"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="SC023230"><Data ss:Type="Number">459.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">Cad. Manual - VOLANTE LOGITECH</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00025</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CAD. MANUAL - JOYCON BRANCO/RO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">459.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00026</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">Cad. Manual - JOYCON PRETO/BRA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">589.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="SC023240"><Data ss:Type="String">C00027</Data></Cell>
+    <Cell ss:StyleID="SC023250"><Data ss:Type="String">Cad. Manual - SOCORRO</Data></Cell>
+    <Cell ss:StyleID="SC023260"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="SC023270"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="SC023280"><Data ss:Type="Number">129.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00028</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">Cad. Manual - BONECO PATO CANS</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">59.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00029</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">Cad. Manual - LUMINARIA CHARMA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">69.8</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00030</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">Cad. Manual - TECLADO MECANICO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">153.8</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C00031</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">Cad. Manual - MOUSE LOGITECH</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEARightMonetario"><Data ss:Type="Number">88.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C00032</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">Cad. Manual - CONTROLE TRUSTMA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBRightMonetario"><Data ss:Type="Number">799.9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
